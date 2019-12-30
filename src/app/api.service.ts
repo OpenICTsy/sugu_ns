@@ -10,7 +10,11 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getFeatured() {
+    // return this.httpClient.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${this.API_KEY}`);
+    return this.httpClient.get(`https://suwayda.info/request-end-point/get/content/articles?featured=only`);
+  }
   getNews() {
-    return this.httpClient.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${this.API_KEY}`);
+    return this.httpClient.get(`https://suwayda.info/request-end-point/get/content/articles`);
   }
 }

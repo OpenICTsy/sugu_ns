@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="primary">
+<ion-content>
     <ion-card>
       <!--<ion-img src="/assets/shapes.svg"></ion-img>-->
       <ion-card-header>
@@ -24,13 +24,13 @@
     </ion-card>
 
         <ion-card *ngFor="let article of articles">
-          <ion-img src="{{article.urlToImage}}"></ion-img>
+          <ion-img src="{{article.images.image_intro}}"></ion-img>
           <ion-card-header>
             <ion-card-subtitle>{{article.title}}</ion-card-subtitle>
           </ion-card-header>
           <ion-card-content>
             <p>
-              {{article.description}}
+              {{article.content}}
             </p>
             <ion-button ion-button fill="outline" href="{{article.url}}" large>Read full article</ion-button>
 

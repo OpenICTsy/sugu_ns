@@ -13,7 +13,7 @@ export class HomePage {
   constructor(private apiService: ApiService) {}
   ionViewDidEnter() {
 
-    this.apiService.getNews().subscribe((data) => {
+    this.apiService.getFeatured().subscribe((data) => {
       console.log(data);
       this.articles = data['articles'];
     });
