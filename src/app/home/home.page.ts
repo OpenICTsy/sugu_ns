@@ -8,14 +8,14 @@ import { ApiService } from '../api.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  articles: any;
+  articles;
 
   constructor(private apiService: ApiService) {}
   ionViewDidEnter() {
 
     this.apiService.getNews().subscribe((data) => {
       console.log(data);
-      this.articles = data.articles;
+      this.articles = data['articles'];
     });
   }
 }
